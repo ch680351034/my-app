@@ -25,13 +25,8 @@ pipeline {
          //       }
          //   }
       //  }
-       stage('scmcheckout') {
-            steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ch680351034/my-app.git']]])
-            }
        
-       }
-        stage('build') {
+        stage('CI') {
             steps {
                 sh 'mvn test'
             }
