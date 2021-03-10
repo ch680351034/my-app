@@ -13,18 +13,18 @@ pipeline {
     agent any
     triggers { pollSCM('* * * * *') }
     stages {
-        stage('gitcheckout') {
-            steps {
-                git 'https://github.com/ch680351034/my-app.git'
-            }
-            post {
+       // stage('gitcheckout') {
+        //    steps {
+        //        git 'https://github.com/ch680351034/my-app.git'
+        //    }
+        //    post {
                 
-                always {
+         //       always {
                 
-                echo 'checkout is done'
-                }
-            }
-        }
+          //      echo 'checkout is done'
+         //       }
+         //   }
+      //  }
         
         stage('build') {
             steps {
